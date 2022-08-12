@@ -1,38 +1,24 @@
-import {useState, useEffect} from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import React from "react";
 
-export const Navbar = () => {
-    const [activeLink, setActiveLink] = useState('home');
-    const [scolled, seScrolled] = useState(false);
-
+const Navbar = () => {
     return (
-        <Navbar bg="light" expand="lg">
-            <Container>
-                <Navbar.Brand href="#home">
-                    <img src={''} alt="Logo" />
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav">
-                    <span className="navbar-toggler-icon"></span>
-                </Navbar.Toggle>
-                <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#biografi">Biografi</Nav.Link>
-                    <Nav.Link href="#contact">Contact</Nav.Link>
-                </Nav>
-                <span className="navbar-text">
-                    <div className="social-icon">
-                        <a href="#"><img src={} alt="" /></a>
-                        <a href="#"><img src={} alt="" /></a>
-                        <a href="#"><img src={} alt="" /></a>
-                    </div>
-                    <button className="vvd" onClick={() => console.log('connect')}><span>Let's Connect</span></button>
-                </span>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#skill">Skill</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#organization">Organization</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     )
 }
+
+export default Navbar;
