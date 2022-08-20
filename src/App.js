@@ -1,11 +1,18 @@
-// import './App.css';
-import Redux from './Task/Redux';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+import Navbar from './Task/Routing/components/navbar/Navbar';
+import Hero from './Task/Routing/components/hero/Hero';
+import Cloud from './Task/Routing/components/cloud/Cloud';
+import Data from './Task/Routing/components/data/Data';
+import Footer from './Task/Routing/components/footer/Footer';
 
-const App = () => {
+function App() {
   return (
     <>
-      <Redux /> 
+      <Navbar />
+      <Hero />
+      <Data />
+      <Cloud />
+      <Footer />
     </>
   );
 }
